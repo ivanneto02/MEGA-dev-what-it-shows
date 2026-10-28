@@ -2,9 +2,9 @@
 
 Review of the course support desk export for ticket #4471.
 
-- [Signed replacement KB decision](support-kb/src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
-- [Rendered desk page (download and open in a browser)](support-kb/rendered/0002-dedupe-by-cause.html)
-- [Reproduce the rendering](support-kb/BUILD.md)
+- [Signed replacement KB decision](src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
+- [Rendered desk page (download and open in a browser)](rendered/0002-dedupe-by-cause.html)
+- [Reproduce the rendering](BUILD.md)
 - [Parser issue draft](drafts/parser.md)
 - [Hint issue draft](drafts/hint.md)
 
