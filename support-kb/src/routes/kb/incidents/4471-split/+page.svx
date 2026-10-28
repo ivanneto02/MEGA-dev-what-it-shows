@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · two date problems'
 owner: Ivan Neto
-status: proposed
+status: resolved
 reviewed: 2026-10-28
 signature: Ivan Neto
 ---
@@ -12,16 +12,22 @@ signature: Ivan Neto
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-Documenting the erroneously merged ticket #4471.
+Ticket #4471 merged two date problems because their symptoms looked alike. The report ID is
+the deduplication key; intake tags are only guesses.
 
-There were two types of bugs affecting tenants and explaining why they see the wrong date.
+## Problems and outcomes
 
-1. Wrong date locale. Users input DD/MM/YYYY whereas the parser expects month-first format.
+1. **Shared parser.** Day-first tenants entered DD/MM/YYYY, but the parser read the value
+   month-first. [Issue 1](https://github.com/ivanneto02/MEGA-dev-what-it-shows/issues/1)
+   closed as completed after `fix(dates): parse dd/mm for eu locales`.
 
-2. booking-v3 prompts users to input MM/DD/YYYY, but the app interprets that as DD/MM/YYYY.
+2. **booking-v3 hint.** The form prompted day-first tenants to enter MM/DD/YYYY, then the app
+   interpreted the value as DD/MM/YYYY. [Issue 2](https://github.com/ivanneto02/MEGA-dev-what-it-shows/issues/2)
+   closed without a fix because the booking-v3 form was retired.
 
 <CauseTable ticket={4471} />
 
-The two causes should be split into different tickets.
+The causes need different tickets because changing the shared parser cannot correct guidance
+printed by a retired form.
 
 <RenderStamp {signature} />
