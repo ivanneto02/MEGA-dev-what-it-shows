@@ -1,0 +1,63 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - link "MEGA.dev, home" [ref=e5] [cursor=pointer]:
+        - /url: /
+    - main [ref=e7]:
+      - region [ref=e8]:
+        - paragraph [ref=e9]:
+          - generic [ref=e10]: Step 1 of 3
+          - generic [ref=e11]: Link works 15 minutes
+        - heading "Sign in to MEGA" [level=1] [ref=e12]
+        - generic [ref=e13]:
+          - paragraph [ref=e14]: Enter the email you enrolled with. We mail you a link that signs you in.
+          - generic [ref=e15]:
+            - generic [ref=e16]: Email
+            - textbox "Email" [active] [ref=e17]:
+              - /placeholder: you@example.com
+            - button [ref=e18] [cursor=pointer]:
+              - generic [ref=e19]:
+                - generic [ref=e20]:
+                  - text: Email me the login link
+                  - generic [aria-hidden] [ref=e21]: →
+                - generic [aria-hidden] [ref=e22]: Sending…
+            - status [ref=e23]
+        - list "Sign-in steps" [ref=e24]:
+          - listitem [ref=e25]:
+            - generic [ref=e26]: "01"
+            - generic [ref=e27]:
+              - generic [ref=e28]: Email
+              - generic [ref=e29]: The address you enrolled with
+            - generic [ref=e30]: Now
+          - listitem [ref=e31]:
+            - generic [ref=e32]: "02"
+            - generic [ref=e33]:
+              - generic [ref=e34]: Inbox
+              - generic [ref=e35]: Open the mailed link in this browser
+          - listitem [ref=e36]:
+            - generic [ref=e37]: "03"
+            - generic [ref=e38]:
+              - generic [ref=e39]: Sign in
+              - generic [ref=e40]: Press the button on the page it opens
+      - figure "01 Core Theo Browne 02 Agents Angie Jones 03 Product Kent C. Dodds 04 Takeoff John Lindquist" [ref=e41]:
+        - list [ref=e42]:
+          - listitem [ref=e43]
+          - listitem [ref=e44]
+          - listitem [ref=e45]
+          - listitem [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: 01 Core
+            - text: Theo Browne
+          - generic [ref=e50]:
+            - generic [ref=e51]: 02 Agents
+            - text: Angie Jones
+          - generic [ref=e52]:
+            - generic [ref=e53]: 03 Product
+            - text: Kent C. Dodds
+          - generic [ref=e54]:
+            - generic [ref=e55]: 04 Takeoff
+            - text: John Lindquist
+  - status [ref=e56]

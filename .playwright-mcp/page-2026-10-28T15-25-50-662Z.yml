@@ -1,0 +1,65 @@
+- generic [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f4e3]:
+    - banner [ref=f4e4]:
+      - link "MEGA.dev, home" [ref=f4e5] [cursor=pointer]:
+        - /url: /
+    - main [ref=f4e7]:
+      - region [ref=f4e8]:
+        - paragraph [ref=f4e9]:
+          - generic [ref=f4e10]: Step 1 of 3
+          - generic [ref=f4e11]: Link works 15 minutes
+        - heading "Sign in to MEGA" [level=1] [ref=f4e12]
+        - generic [ref=f4e13]:
+          - paragraph [ref=f4e14]: Enter the email you enrolled with. We mail you a link that signs you in.
+          - generic [ref=f4e15]:
+            - generic [ref=f4e16]: Email
+            - textbox "Email" [active] [ref=f4e17]:
+              - /placeholder: you@example.com
+              - text: ineto@altoira.com
+            - button [ref=f4e18] [cursor=pointer]:
+              - generic [ref=f4e19]:
+                - generic [ref=f4e20]:
+                  - text: Email me the login link
+                  - generic [aria-hidden] [ref=f4e21]: →
+                - generic [aria-hidden] [ref=f4e22]: Sending…
+            - alert [ref=f4e57]: We just sent a link. Check your inbox, or try again in 18 s.
+            - status [ref=f4e23]
+        - list "Sign-in steps" [ref=f4e24]:
+          - listitem [ref=f4e25]:
+            - generic [ref=f4e26]: "01"
+            - generic [ref=f4e27]:
+              - generic [ref=f4e28]: Email
+              - generic [ref=f4e29]: The address you enrolled with
+            - generic [ref=f4e30]: Now
+          - listitem [ref=f4e31]:
+            - generic [ref=f4e32]: "02"
+            - generic [ref=f4e33]:
+              - generic [ref=f4e34]: Inbox
+              - generic [ref=f4e35]: Open the mailed link in this browser
+          - listitem [ref=f4e36]:
+            - generic [ref=f4e37]: "03"
+            - generic [ref=f4e38]:
+              - generic [ref=f4e39]: Sign in
+              - generic [ref=f4e40]: Press the button on the page it opens
+      - figure "01 Core Theo Browne 02 Agents Angie Jones 03 Product Kent C. Dodds 04 Takeoff John Lindquist" [ref=f4e41]:
+        - list [ref=f4e42]:
+          - listitem [ref=f4e43]
+          - listitem [ref=f4e44]
+          - listitem [ref=f4e45]
+          - listitem [ref=f4e46]
+        - generic [ref=f4e47]:
+          - generic [ref=f4e48]:
+            - generic [ref=f4e49]: 01 Core
+            - text: Theo Browne
+          - generic [ref=f4e50]:
+            - generic [ref=f4e51]: 02 Agents
+            - text: Angie Jones
+          - generic [ref=f4e52]:
+            - generic [ref=f4e53]: 03 Product
+            - text: Kent C. Dodds
+          - generic [ref=f4e54]:
+            - generic [ref=f4e55]: 04 Takeoff
+            - text: John Lindquist
+  - status [ref=f4e56]
