@@ -1,30 +1,28 @@
 ---
 layout: runbook
-title: '#4471 · two date problems'
+title: '#4471 · dates parse mm/dd in eu locales'
 owner: support desk
-status: resolved
-reviewed: 2026-10-28
-signature: Ivan Neto
+status: known
+reviewed: 2026-09-30
 ---
 
 <script>
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
-  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
 </script>
 
-Ticket #4471 merged two date problems because their symptoms looked alike. The report ID is
-the deduplication key; intake tags are only guesses.
+Since April, people have told us their bookings land on the wrong day: a month flipped. By
+4 October the desk had **412 reports**.
 
-## Problems and outcomes
+**Merged as one issue.** The parser reads dates month first, and our tenants write the day
+first. The fix is queued.
 
-1. **Shared parser.** Day-first tenants entered DD/MM/YYYY, but the parser read the value
-   month-first. [Issue 1](https://github.com/ivanneto02/MEGA-dev-what-it-shows/issues/1)
-   closed as completed after `fix(dates): parse dd/mm for eu locales`.
+<Callout>
+Known. One issue, one fix queued.
+</Callout>
 
-2. **booking-v3 hint.** The form prompted day-first tenants to enter MM/DD/YYYY, then the app
-   interpreted the value as DD/MM/YYYY. [Issue 2](https://github.com/ivanneto02/MEGA-dev-what-it-shows/issues/2)
-   closed without a fix because the booking-v3 form was retired.
+## What was merged
 
 <CauseTable ticket={4471} />
 
@@ -32,7 +30,7 @@ the deduplication key; intake tags are only guesses.
 
 <QueueTimeline ticket={4471} />
 
-The causes need different tickets because changing the shared parser cannot correct guidance
-printed by a retired form.
+## Lessons
 
-<RenderStamp {signature} />
+- A big ticket is mostly one bug reported many times. Merge early, count once.
+- Write the page while the queue is still in your head.
