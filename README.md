@@ -2,8 +2,9 @@
 
 Review of the course support desk export for ticket #4471.
 
+- [Signed incident review](src/routes/kb/incidents/4471-review/+page.svx)
 - [Signed replacement KB decision](src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx)
-- [Rendered desk page (download and open in a browser)](rendered/0002-dedupe-by-cause.html)
+- [Rendered desk page (download and open in a browser)](rendered/4471-review.html)
 - [Reproduce the rendering](BUILD.md)
 - [Parser issue draft](drafts/parser.md)
 - [Hint issue draft](drafts/hint.md)

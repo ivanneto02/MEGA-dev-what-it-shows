@@ -2,7 +2,7 @@
 
 Run `npm ci` and `npm run render` in this directory with Node 22 or later.
 The lockfile pins the build dependencies. The generated standalone HTML is
-`rendered/0002-dedupe-by-cause.html`; open it in a browser.
+`rendered/4471-review.html`; open it in a browser.
 
 This is a static server-rendered snapshot of the supplied Svelte components and
 mdsvex page, including the computed table, timeline, comparisons, and signature.
