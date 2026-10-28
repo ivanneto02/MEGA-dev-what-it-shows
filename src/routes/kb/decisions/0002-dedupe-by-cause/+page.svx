@@ -4,7 +4,7 @@ title: '0002 · Split #4471 and deduplicate by cause'
 owner: Ivan Neto
 status: accepted
 reviewed: '2026-10-28'
-signature: 'Ivan Neto · Codex · S01E03'
+signature: 'v1.eyJzdWIiOiI1MjU1IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMDU1OTksImV4cCI6MTc5MzI5MTk5OX0.MicIxIL5ntgCtbSxPY-4hHUaIGM7fuo5KZSmH7cBvlU'
 ---
 
 <script>

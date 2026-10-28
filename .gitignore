@@ -2,3 +2,5 @@
 kb-export-*.zip
 node_modules/
 dist/
+
+.challenge-log/
