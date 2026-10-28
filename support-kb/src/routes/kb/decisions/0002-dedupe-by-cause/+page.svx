@@ -1,0 +1,67 @@
+---
+layout: runbook
+title: '0002 · Split #4471 and deduplicate by cause'
+owner: Ivan Neto
+status: accepted
+reviewed: '2026-10-28'
+signature: 'Ivan Neto · Codex · S01E03'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+## Decision
+
+This record supersedes [decision 0001](/kb/decisions/0001-dedupe-by-subject).
+The accepted historical decision remains unchanged. Match reports by demonstrated cause,
+using the tenant's locale, booking form and channel. Neither equal subjects nor intake
+labels prove that reports share a cause. Different subjects can describe the same cause.
+If the tenant is unknown or the cause cannot be established, investigate rather than merge.
+
+## What #4471 contains
+
+The export repeats report IDs across overlapping pages. Deduplicate by ID before filtering
+for #4471 and grouping by cause. The table below computes the counts from the export and
+tenant directory. Browser locale and intake tags are evidence of intake's guess, not the
+source of truth. The table's “no ticket of its own” label describes the exported desk state.
+
+<CauseTable ticket={4471} />
+
+The shared parser reads month first for day-first tenants. Separately, booking-v3 prints
+MM/DD/YYYY while interpreting the submitted date in tenant order. Fixing the parser does
+not itself fix the form hint. File one issue per cause, with its distinct report count.
+
+The reports described by the desk as a one-day move stay in the parser count under the
+export's tenant-based classifier. Keep that observation visible and investigate it if new
+evidence appears; it does not by itself justify inventing another cause.
+
+## What the timeline shows
+
+<QueueTimeline ticket={4471} />
+
+Received dates describe when reports arrived. Merged dates describe desk processing.
+A merge spike is not evidence that the bug began then. Reports were arriving before
+being merged; the older “one issue, one fix queued” narrative obscured a separate cause.
+
+## Current engineering disposition
+
+Checked the live course challenge page on 28 October 2026: #4471 closed on 5 October.
+The parser is **fixed**, recorded as “fix(dates): parse dd/mm for eu locales”.
+The hint is **won't fix**, because booking-v3 was retired. These are the desk's reported
+outcomes; this export alone cannot verify a production rollout. Its 4 October snapshot
+predates those outcomes. Do not copy its “fix queued” status as current advice.
+
+## Apply the replacement rule
+
+<DedupeExplorer />
+
+Read the rendered comparisons before merging. The same tenant and subject can still
+produce different causes through different channels. Unknown tenants require investigation.
+The old triage page and incident narrative are historical and conflict with these live
+computed views; use this replacement record for new triage and recheck status when reviewing.
+
+<RenderStamp {signature} />

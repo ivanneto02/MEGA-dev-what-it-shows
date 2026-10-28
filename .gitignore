@@ -1,2 +1,4 @@
 .playwright-mcp/
 kb-export-*.zip
+support-kb/node_modules/
+support-kb/dist/
