@@ -19,6 +19,8 @@ Start with [triage](/kb/triage/dedupe) if you are new on the desk.
 
 <KbIndex />
 
+- [#4471 · two date problems](/kb/incidents/4471-split)
+
 ## Writing a page
 
 Keep the words here and the logic in `src/lib`. A number that can be computed should be
